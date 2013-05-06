@@ -50,6 +50,8 @@ public class CalendarController implements Observer {
 	 * The calendar view is the highest level of representation for the UI
 	 */
 	public CalendarView theView;
+
+	private static CalendarController instance;
 	
 	/**
 	 *  Called when there is a change in the model, this method will
@@ -61,11 +63,6 @@ public class CalendarController implements Observer {
 	 *  @param param is the parameter sent by the notifyObservers methods 
 	 */
 	public void update(Observable o, Object param) {
-		boolean setChanged = 
-			param != null && 
-			(	param instanceof AppointmentTemplate ||
-				param instanceof RefAppointment);
-		
 		theView.update(
 			theModel.getAppointmentSet(), 
 			theModel.getCurrentDate(), 
@@ -103,8 +100,8 @@ public class CalendarController implements Observer {
 		
 		
 		// listens for when the menu item "New Calendar" is selected
-		NewCalendarActionListener newCalL = new NewCalendarActionListener(this);
-		theView.addNewCalendarActionListener(newCalL);
+		//NewCalendarActionListener newCalL = new NewCalendarActionListener(this);
+		//theView.addNewCalendarActionListener(newCalL);
 
 		// listens for when the menu item "Open Calendar" is selected
 		OpenCalendarActionListener openCalL = new OpenCalendarActionListener(this);
@@ -123,8 +120,8 @@ public class CalendarController implements Observer {
 		theView.addExitApplicationActionListener(exitAppL);
 
 		// listens for when the menu item "New Appointment" is selected
-		NewAppointmentActionListener newApptL = new NewAppointmentActionListener(this);
-		theView.addNewAppointmentActionListener(newApptL);
+		//NewAppointmentActionListener newApptL = new NewAppointmentActionListener(this);
+		//theView.addNewAppointmentActionListener(newApptL);
 
 		// listens for when the menu item "Edit Appointment" is selected
 		EditAppointmentActionListener editApptL = new EditAppointmentActionListener(this);
@@ -284,6 +281,10 @@ public class CalendarController implements Observer {
 		ex.printStackTrace();
 	}
 	
+	public static CalendarController getInstance() {
+		return instance;
+	}
+	
 	/**
 	 * The constructor of the Controller takes a model and a view and
 	 * adds various listeners to the view and then adds itself as an
@@ -295,6 +296,7 @@ public class CalendarController implements Observer {
 	public CalendarController(CalendarModel model, CalendarView view) {
 		theModel = model;
 		theView = view;
+		instance = this;
 		
 		// add this CalendarController as an observer to the 
 		// model, so the view can be updated when the model changes

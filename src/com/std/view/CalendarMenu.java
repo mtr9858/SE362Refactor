@@ -1,10 +1,14 @@
 package com.std.view;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+
+import com.std.menucommands.NewAppointment;
+import com.std.menucommands.NewCalendar;
 
 /**
  * The is the menu
@@ -88,6 +92,12 @@ public class CalendarMenu extends JMenuBar {
 		newCalendar = new JMenuItem("New Calendar");
 		newCalendar.setMnemonic(KeyEvent.VK_N);
 		fileMenu.add(newCalendar);
+		newCalendar.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				NewCalendar newcalendar = new NewCalendar();
+				newcalendar.execute();
+			}
+		});
 		
 		openCalendar = new JMenuItem("Open File...");
 		openCalendar.setMnemonic(KeyEvent.VK_O);
@@ -114,6 +124,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		newAppointment = new JMenuItem("New Appointment...");
 		editMenu.add(newAppointment);
+		newAppointment.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				NewAppointment newappointment = new NewAppointment();
+				newappointment.execute();
+			}
+		});
 		
 		editMenu.addSeparator();
 		
