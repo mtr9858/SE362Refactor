@@ -9,6 +9,8 @@ import javax.swing.JMenuItem;
 
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
+import com.std.menucommands.OpenCalendar;
+import com.std.menucommands.SaveCalendar;
 
 /**
  * The is the menu
@@ -102,12 +104,24 @@ public class CalendarMenu extends JMenuBar {
 		openCalendar = new JMenuItem("Open File...");
 		openCalendar.setMnemonic(KeyEvent.VK_O);
 		fileMenu.add(openCalendar);
+		openCalendar.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				OpenCalendar opencalendar = new OpenCalendar();
+				opencalendar.execute();
+			}
+		});
 		
 		fileMenu.addSeparator();
 		
 		saveCalendar = new JMenuItem("Save");
 		saveCalendar.setMnemonic(KeyEvent.VK_S);
 		fileMenu.add(saveCalendar);
+		saveCalendar.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				SaveCalendar savecalendar = new SaveCalendar();
+				savecalendar.execute();
+			}
+		});
 		
 		saveAsCalendar = new JMenuItem("Save As...");
 		fileMenu.add(saveAsCalendar);
