@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import com.std.menucommands.Exit;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
 import com.std.menucommands.OpenCalendar;
@@ -137,6 +138,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		exitApplication = new JMenuItem("Exit");
 		fileMenu.add(exitApplication);
+		exitApplication.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Exit exit = new Exit();
+				exit.execute();
+			}
+		});
 		
 		
 		JMenu editMenu = new JMenu("Edit");
