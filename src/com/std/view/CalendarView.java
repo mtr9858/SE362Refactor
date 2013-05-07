@@ -40,6 +40,11 @@ import com.std.view.panel.WeeklyPanel;
  */
 
 public class CalendarView extends JFrame {	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private final static SimpleDateFormat FORMAT = new SimpleDateFormat("MMMM, yyyy");
 	
 	/**
@@ -133,135 +138,6 @@ public class CalendarView extends JFrame {
 	
 	public void addPrevButtonActionListener(ActionListener listener) {
 		prevButton.addActionListener(listener);
-	}
-
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  new appointment blocks
-	 */
-	
-	
-	public void addNewCalendarActionListener(ActionListener listener) {
-		calMenu.getNewCalendarMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  open calendar button
-	 */
-	
-	
-	public void addOpenCalendarActionListener(ActionListener listener) {
-		calMenu.getOpenCalendarMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  save calendar button
-	 */
-	
-	
-	public void addSaveCalendarActionListener(ActionListener listener) {
-		calMenu.getSaveCalendarMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  save as button
-	 */
-	
-	
-	public void addSaveAsCalendarActionListener(ActionListener listener) {
-		calMenu.getSaveAsCalendarMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  exit button
-	 */
-	
-	
-	public void addExitApplicationActionListener(ActionListener listener) {
-		calMenu.getExitApplicationMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		 new appointment button
-	 */
-	
-	public void addNewAppointmentActionListener(ActionListener listener) {
-		calMenu.getNewAppointmentMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  edit appointment button
-	 */
-	
-	public void addEditAppointmentActionListener(ActionListener listener) {
-		calMenu.getEditAppointmentMenuItem().addActionListener(listener);
-		appointmentView.addEditSingleListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  edit all appointment button
-	 */
-	
-	public void addEditAllAppointmentActionListener(ActionListener listener) {
-		calMenu.getEditAllAppointmentMenuItem().addActionListener(listener);
-		appointmentView.addEditRecurringListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  remove button
-	 */
-	
-	public void addRemoveAppointmentActionListener(ActionListener listener) {
-		calMenu.getRemoveAppointmentMenuItem().addActionListener(listener);
-		appointmentView.addRemoveSingleListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  Remove all appointment button
-	 */
-	
-	public void addRemoveAllAppointmentActionListener(ActionListener listener) {
-		calMenu.getRemoveAllAppointmentMenuItem().addActionListener(listener);
-		appointmentView.addRemoveRecurringListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  preerences button
-	 */
-	
-	public void addPreferencesActionListener(ActionListener listener) {
-		calMenu.getPreferencesMenuItem().addActionListener(listener);
-	}
-	
-	/**
-	 * This passes a mouse listener down to the different views
-	 * @param listener is the mouse listener to be added to the 
-	 * 		  about button 
-	 */
-	
-	public void addAboutActionListener(ActionListener listener) {
-		calMenu.getAboutMenuItem().addActionListener(listener);
 	}
 	
 	/**

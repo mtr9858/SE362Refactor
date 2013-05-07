@@ -49,43 +49,6 @@ public class CalendarMenu extends JMenuBar {
 	private final JMenuItem removeAllAppointment;
 	private final JMenuItem preferences;
 	private final JMenuItem about;
-	
-	public JMenuItem getNewCalendarMenuItem() {
-		return newCalendar;
-	}
-	public JMenuItem getOpenCalendarMenuItem() {
-		return openCalendar;
-	}
-	public JMenuItem getSaveCalendarMenuItem() {
-		return saveCalendar;
-	}
-	public JMenuItem getSaveAsCalendarMenuItem() {
-		return saveAsCalendar;
-	}
-	public JMenuItem getExitApplicationMenuItem() {
-		return exitApplication;
-	}
-	public JMenuItem getNewAppointmentMenuItem() {
-		return newAppointment;
-	}
-	public JMenuItem getEditAppointmentMenuItem() {
-		return editAppointment;
-	}
-	public JMenuItem getEditAllAppointmentMenuItem() {
-		return editAllAppointment;
-	}
-	public JMenuItem getRemoveAppointmentMenuItem() {
-		return removeAppointment;
-	}
-	public JMenuItem getRemoveAllAppointmentMenuItem() {
-		return removeAllAppointment;
-	}
-	public JMenuItem getPreferencesMenuItem() {
-		return preferences;
-	}
-	public JMenuItem getAboutMenuItem() {
-		return about;
-	}
 
 	/**
 	 * This is the constructor for the menu, it sets up how it
