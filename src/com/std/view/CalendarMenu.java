@@ -8,6 +8,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import com.std.menucommands.EditAppointment;
+import com.std.menucommands.EditRecurringAppointment;
 import com.std.menucommands.Exit;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
@@ -171,8 +172,15 @@ public class CalendarMenu extends JMenuBar {
 			}
 		});
 		
+		
 		editAppointment = new JMenuItem("Disjoin and Edit Appointment...");
 		editMenu.add(editAppointment);
+		editAppointment.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				EditRecurringAppointment editrecurringappointment = new EditRecurringAppointment();
+				editrecurringappointment.execute();
+			}
+		});
 		
 		editMenu.addSeparator();
 		

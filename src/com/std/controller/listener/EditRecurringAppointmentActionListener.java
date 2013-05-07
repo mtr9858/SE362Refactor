@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 import com.std.controller.CalendarController;
 import com.std.controller.dialog.AppointmentDialog;
 import com.std.model.CalendarModelUtility;
-import com.std.model.appointment.AppointmentTemplate;
 import com.std.model.appointment.RefAppointment;
 
 public class EditRecurringAppointmentActionListener implements ActionListener {
