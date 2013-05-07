@@ -144,8 +144,8 @@ public class CalendarController implements Observer {
 		//theView.addPreferencesActionListener(prefL);
 
 		// listens for when the menu item "About" is selected
-		AboutActionListener aboutL = new AboutActionListener(this);
-		theView.addAboutActionListener(aboutL);
+		//AboutActionListener aboutL = new AboutActionListener(this);
+		//theView.addAboutActionListener(aboutL);
 	}
 	
 	/**

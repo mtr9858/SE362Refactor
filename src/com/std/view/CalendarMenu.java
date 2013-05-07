@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import com.std.menucommands.About;
 import com.std.menucommands.EditAppointment;
 import com.std.menucommands.EditRecurringAppointment;
 import com.std.menucommands.Exit;
@@ -223,5 +224,11 @@ public class CalendarMenu extends JMenuBar {
 		
 		about = new JMenuItem("About");
 		helpMenu.add(about);
+		about.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				About about = new About();
+				about.execute();
+			}
+		});
 	}
 }
