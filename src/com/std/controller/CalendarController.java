@@ -140,8 +140,8 @@ public class CalendarController implements Observer {
 		//theView.addRemoveAllAppointmentActionListener(remAllApptL);
 
 		// listens for when the menu item "Preferences" is selected
-		PreferencesActionListener prefL = new PreferencesActionListener(this);
-		theView.addPreferencesActionListener(prefL);
+		//PreferencesActionListener prefL = new PreferencesActionListener(this);
+		//theView.addPreferencesActionListener(prefL);
 
 		// listens for when the menu item "About" is selected
 		AboutActionListener aboutL = new AboutActionListener(this);

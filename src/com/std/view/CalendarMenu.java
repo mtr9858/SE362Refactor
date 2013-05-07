@@ -13,6 +13,7 @@ import com.std.menucommands.Exit;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
 import com.std.menucommands.OpenCalendar;
+import com.std.menucommands.Preferences;
 import com.std.menucommands.RemoveAllAppointments;
 import com.std.menucommands.RemoveAppointment;
 import com.std.menucommands.SaveAsCalendar;
@@ -208,6 +209,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		preferences = new JMenuItem("Preferences...");
 		editMenu.add(preferences);
+		preferences.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				Preferences preferences = new Preferences();
+				preferences.execute();
+			}
+		});
 		
 		
 		JMenu helpMenu = new JMenu("Help");
