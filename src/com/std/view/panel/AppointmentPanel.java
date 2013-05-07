@@ -32,6 +32,11 @@ import com.std.util.GroupLayoutUtility;
  */
 
 public class AppointmentPanel extends JToggleButton {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7969798111235595944L;
+
 	private static final SimpleDateFormat FORMAT = new SimpleDateFormat("EEE, d MMM yyyy 'at' h:mm aa");
 	
 	/**

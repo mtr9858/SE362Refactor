@@ -6,6 +6,10 @@ import java.awt.GridBagConstraints;
 import javax.swing.JPanel;
 
 public class TimeBlock extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6856854139381235329L;
 	private GridBagConstraints constraints;
 	
 	public TimeBlock(int increments) {

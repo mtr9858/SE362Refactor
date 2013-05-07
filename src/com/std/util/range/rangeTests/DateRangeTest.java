@@ -32,7 +32,7 @@ public class DateRangeTest {
 		cal.add(Calendar.DATE, numDays);
 		Date endD = cal.getTime();
 		DateRange dRange = new DateRange(startD,endD);
-		assertEquals(numDays, dRange.getDurationInDays());
+		assertEquals(numDays, dRange.getDurationInDays(), 0);
 	}
 
 	@Test

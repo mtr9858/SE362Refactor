@@ -23,6 +23,10 @@ import com.std.util.range.DateRange;
 public abstract class RecurrencePattern implements Serializable {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3095257844337323453L;
+	/**
 	 * This is the span of time that the appointment
 	 * can exist on.
 	 */

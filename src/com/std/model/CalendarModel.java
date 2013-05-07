@@ -460,6 +460,7 @@ public class CalendarModel extends Observable {
 		diffFile = false;
 		this.setChanged();
 		this.notifyObservers();
+		out.close();
 	}
 
 	/**
@@ -482,6 +483,8 @@ public class CalendarModel extends Observable {
 			count = in.readInt();
 			while(count-- > 0)
 				apptSet.add((RefAppointment)in.readObject());
+			
+			in.close();
 		}
 		this.defaultApptTmpl.setFields(defaultApptTmpl);
 		this.apptSet.clear();

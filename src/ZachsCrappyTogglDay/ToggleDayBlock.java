@@ -6,8 +6,9 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.MouseListener;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Set;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,21 +17,19 @@ import javax.swing.JScrollPane;
 import javax.swing.JToggleButton;
 import javax.swing.border.EtchedBorder;
 
- import java.util.HashMap;
-    import java.util.Set;
-
-    import com.std.model.CalendarModelUtility;
-
-    import com.std.model.appointment.RefAppointment;
+import com.std.model.CalendarModelUtility;
+import com.std.model.appointment.RefAppointment;
 	
 public class ToggleDayBlock extends JToggleButton {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2094795817901775280L;
 	private JLabel date;
 	private JPanel center;
 	private static final SimpleDateFormat FORMAT = new SimpleDateFormat("MMM dd" );
 	private Date today;
-	private MouseListener apptListener;
-	
 	public ToggleDayBlock(Date d) {
 		super();
 
@@ -103,7 +102,6 @@ public class ToggleDayBlock extends JToggleButton {
 	}
 	
 	public void addAppointmentListener(MouseListener aL) {
-		apptListener = aL;
 	}
 	
 	public static void main(String[] args) {

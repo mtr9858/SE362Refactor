@@ -6,12 +6,15 @@ import java.awt.event.MouseListener;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 
 public class AppointmentBlock extends JPanel {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 475313636764908932L;
 	private Set<AppointmentLabel> appoints;
 	private GridBagConstraints constraints;
 	

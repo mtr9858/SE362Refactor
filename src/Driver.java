@@ -12,6 +12,7 @@ import com.std.view.CalendarView;
  *
  */
 public class Driver {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws IOException {
 		
 		CalendarModel model = new CalendarModel();

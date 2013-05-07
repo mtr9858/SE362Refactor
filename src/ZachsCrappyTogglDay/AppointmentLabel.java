@@ -10,6 +10,10 @@ import javax.swing.border.EtchedBorder;
 
 public class AppointmentLabel extends JPanel {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8023742661462591748L;
 	private RefAppointment ref;
 	private static final SimpleDateFormat FORMAT = new SimpleDateFormat("h:mm a");
 	
