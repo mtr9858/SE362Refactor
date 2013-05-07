@@ -132,8 +132,8 @@ public class CalendarController implements Observer {
 		//theView.addEditAllAppointmentActionListener(editRecApptL);
 
 		// listens for when the menu item "Remove Appointment" is selected
-		RemoveAppointmentActionListener remApptL = new RemoveAppointmentActionListener(this);
-		theView.addRemoveAppointmentActionListener(remApptL);
+		//RemoveAppointmentActionListener remApptL = new RemoveAppointmentActionListener(this);
+		//theView.addRemoveAppointmentActionListener(remApptL);
 
 		// listens for when the menu item "Remove All Occurances" is selected
 		RemoveAllAppointmentActionListener remAllApptL = new RemoveAllAppointmentActionListener(this);

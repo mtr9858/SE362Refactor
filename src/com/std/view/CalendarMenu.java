@@ -13,6 +13,7 @@ import com.std.menucommands.Exit;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
 import com.std.menucommands.OpenCalendar;
+import com.std.menucommands.RemoveAppointment;
 import com.std.menucommands.SaveAsCalendar;
 import com.std.menucommands.SaveCalendar;
 
@@ -186,6 +187,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		removeAppointment = new JMenuItem("Remove Single Appointment");
 		editMenu.add(removeAppointment);
+		removeAppointment.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				RemoveAppointment removeappointment = new RemoveAppointment();
+				removeappointment.execute();
+			}
+		});
 		
 		removeAllAppointment = new JMenuItem("Remove All Recurring Appointments");
 		editMenu.add(removeAllAppointment);
