@@ -124,8 +124,8 @@ public class CalendarController implements Observer {
 		//theView.addNewAppointmentActionListener(newApptL);
 
 		// listens for when the menu item "Edit Appointment" is selected
-		EditAppointmentActionListener editApptL = new EditAppointmentActionListener(this);
-		theView.addEditAppointmentActionListener(editApptL);
+		//EditAppointmentActionListener editApptL = new EditAppointmentActionListener(this);
+		//theView.addEditAppointmentActionListener(editApptL);
 
 		// listens for when the menu item "Edit Recurring Appointment" is selected
 		EditRecurringAppointmentActionListener editRecApptL = new EditRecurringAppointmentActionListener(this);

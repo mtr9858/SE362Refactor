@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import com.std.menucommands.EditAppointment;
 import com.std.menucommands.Exit;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
@@ -163,6 +164,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		editAllAppointment = new JMenuItem("Edit Appointment...");
 		editMenu.add(editAllAppointment);
+		editAllAppointment.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				EditAppointment editappointment = new EditAppointment();
+				editappointment.execute();
+			}
+		});
 		
 		editAppointment = new JMenuItem("Disjoin and Edit Appointment...");
 		editMenu.add(editAppointment);
