@@ -7,26 +7,12 @@ import java.util.Observer;
 
 import javax.swing.JOptionPane;
 
-import com.std.controller.listener.AboutActionListener;
 import com.std.controller.listener.AppointmentSelectionMouseListener;
 import com.std.controller.listener.DateSelectionActionListener;
 import com.std.controller.listener.DefaultWindowListener;
-import com.std.controller.listener.EditAppointmentActionListener;
-import com.std.controller.listener.EditRecurringAppointmentActionListener;
-import com.std.controller.listener.ExitApplicationActionListener;
-import com.std.controller.listener.NewAppointmentActionListener;
-import com.std.controller.listener.NewCalendarActionListener;
 import com.std.controller.listener.NextButtonActionListener;
-import com.std.controller.listener.OpenCalendarActionListener;
-import com.std.controller.listener.PreferencesActionListener;
 import com.std.controller.listener.PrevButtonActionListener;
-import com.std.controller.listener.RemoveAllAppointmentActionListener;
-import com.std.controller.listener.RemoveAppointmentActionListener;
-import com.std.controller.listener.SaveAsCalendarActionListener;
-import com.std.controller.listener.SaveCalendarActionListener;
 import com.std.model.CalendarModel;
-import com.std.model.appointment.AppointmentTemplate;
-import com.std.model.appointment.RefAppointment;
 import com.std.view.CalendarView;
 
 /**
@@ -80,7 +66,6 @@ public class CalendarController implements Observer {
 		DefaultWindowListener defW = new DefaultWindowListener(this);
 		theView.addWindowListener(defW);
 		
-		
 		// listens for when an appointment is selected
 		AppointmentSelectionMouseListener apptSelL = new AppointmentSelectionMouseListener(this);
 		theView.addAppointmentSelectionListener(apptSelL);
@@ -97,55 +82,6 @@ public class CalendarController implements Observer {
 		// listens for when the previous button is pressed
 		PrevButtonActionListener prevL = new PrevButtonActionListener(this);
 		theView.addPrevButtonActionListener(prevL);
-		
-		
-		// listens for when the menu item "New Calendar" is selected
-		//NewCalendarActionListener newCalL = new NewCalendarActionListener(this);
-		//theView.addNewCalendarActionListener(newCalL);
-
-		// listens for when the menu item "Open Calendar" is selected
-		//OpenCalendarActionListener openCalL = new OpenCalendarActionListener(this);
-		//theView.addOpenCalendarActionListener(openCalL);
-
-		// listens for when the menu item "Save Calendar" is selected
-		//SaveCalendarActionListener saveCalL = new SaveCalendarActionListener(this);
-		//theView.addSaveCalendarActionListener(saveCalL);
-
-		// listens for when the menu item "Save As Calendar" is selected
-		//SaveAsCalendarActionListener saveAsCalL = new SaveAsCalendarActionListener(this);
-		//theView.addSaveAsCalendarActionListener(saveAsCalL);
-
-		// listens for when the menu item "Exit" is selected
-		//ExitApplicationActionListener exitAppL = new ExitApplicationActionListener(this);
-		//theView.addExitApplicationActionListener(exitAppL);
-
-		// listens for when the menu item "New Appointment" is selected
-		//NewAppointmentActionListener newApptL = new NewAppointmentActionListener(this);
-		//theView.addNewAppointmentActionListener(newApptL);
-
-		// listens for when the menu item "Edit Appointment" is selected
-		//EditAppointmentActionListener editApptL = new EditAppointmentActionListener(this);
-		//theView.addEditAppointmentActionListener(editApptL);
-
-		// listens for when the menu item "Edit Recurring Appointment" is selected
-		//EditRecurringAppointmentActionListener editRecApptL = new EditRecurringAppointmentActionListener(this);
-		//theView.addEditAllAppointmentActionListener(editRecApptL);
-
-		// listens for when the menu item "Remove Appointment" is selected
-		//RemoveAppointmentActionListener remApptL = new RemoveAppointmentActionListener(this);
-		//theView.addRemoveAppointmentActionListener(remApptL);
-
-		// listens for when the menu item "Remove All Occurances" is selected
-		//RemoveAllAppointmentActionListener remAllApptL = new RemoveAllAppointmentActionListener(this);
-		//theView.addRemoveAllAppointmentActionListener(remAllApptL);
-
-		// listens for when the menu item "Preferences" is selected
-		//PreferencesActionListener prefL = new PreferencesActionListener(this);
-		//theView.addPreferencesActionListener(prefL);
-
-		// listens for when the menu item "About" is selected
-		//AboutActionListener aboutL = new AboutActionListener(this);
-		//theView.addAboutActionListener(aboutL);
 	}
 	
 	/**
