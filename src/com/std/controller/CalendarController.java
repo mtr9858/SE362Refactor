@@ -112,8 +112,8 @@ public class CalendarController implements Observer {
 		//theView.addSaveCalendarActionListener(saveCalL);
 
 		// listens for when the menu item "Save As Calendar" is selected
-		SaveAsCalendarActionListener saveAsCalL = new SaveAsCalendarActionListener(this);
-		theView.addSaveAsCalendarActionListener(saveAsCalL);
+		//SaveAsCalendarActionListener saveAsCalL = new SaveAsCalendarActionListener(this);
+		//theView.addSaveAsCalendarActionListener(saveAsCalL);
 
 		// listens for when the menu item "Exit" is selected
 		ExitApplicationActionListener exitAppL = new ExitApplicationActionListener(this);

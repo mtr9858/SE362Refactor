@@ -10,6 +10,7 @@ import javax.swing.JMenuItem;
 import com.std.menucommands.NewAppointment;
 import com.std.menucommands.NewCalendar;
 import com.std.menucommands.OpenCalendar;
+import com.std.menucommands.SaveAsCalendar;
 import com.std.menucommands.SaveCalendar;
 
 /**
@@ -125,6 +126,12 @@ public class CalendarMenu extends JMenuBar {
 		
 		saveAsCalendar = new JMenuItem("Save As...");
 		fileMenu.add(saveAsCalendar);
+		saveAsCalendar.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				SaveAsCalendar saveascalendar = new SaveAsCalendar();
+				saveascalendar.execute();
+			}
+		});
 		
 		fileMenu.addSeparator();
 		
